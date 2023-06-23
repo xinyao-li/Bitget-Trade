@@ -1,0 +1,1 @@
+last_trade_price=26426.5
