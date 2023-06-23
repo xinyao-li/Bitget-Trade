@@ -18,7 +18,7 @@ class CryptoTrade:
     # Instantiate REST API Connection
     client = Client(config.API_KEY, config.SECRET_KEY, config.API_PASSPHARSE)
     last_trade_price = variable.last_trade_price
-    holding_amount = None
+    holding_amount = 0
 
     '''
         The method use for executing grid trading in range of low to high, it will check the bid_price and ask_price every second, buy or sell
@@ -78,7 +78,6 @@ class CryptoTrade:
             self.holding_amount = float(self.api.get_position(ticker).qty)
         except Exception as e:
             logging.exception(e)
-            self.holding_amount = 0
 
     '''
         refresh the buying power
