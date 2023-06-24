@@ -32,7 +32,7 @@ class CryptoTrade:
     '''
     def grid_trading(self, ticker, high, low, percentage, buying_power_percentage):
         # Get the buying power from account
-        self.refresh_holding_amount(ticker)
+        self.refresh_holding_amount('BTC')
         self.refresh_buying_power()
 
         self.logger.info('buying power is: ' + str(self.buying_power))
@@ -42,8 +42,8 @@ class CryptoTrade:
         if self.last_trade_price is not None:
             while True:
                 # Get the current price of ticker in Binance in every 1 sec
-                bid_price = self.get_price(ticker)[0]
-                ask_price = self.get_price(ticker)[1]
+                bid_price = self.get_price('BTCUSDT_UMCBL')[0]
+                ask_price = self.get_price('BTCUSDT_UMCBL')[1]
 
                 # If the price is in range low to high, if the price drop 'percentage' then buy, else if price reach 'percentage' then sell
                 # Buy or Sell amount will be buy_power_percentage of buying power divided by current price of ticker.
@@ -64,8 +64,8 @@ class CryptoTrade:
         bid_price = None
         ask_price = None
         try:
-            bid_price = self.client.mix_get_single_symbol_ticker('BTCUSDT_UMCBL').get('data').get('bestBid')
-            ask_price = self.client.mix_get_single_symbol_ticker('BTCUSDT_UMCBL').get('data').get('bestAsk')
+            bid_price = self.client.mix_get_single_symbol_ticker(ticker).get('data').get('bestBid')
+            ask_price = self.client.mix_get_single_symbol_ticker(ticker).get('data').get('bestAsk')
         except Exception as e:
             print('last trade price is: ' + str(self.last_trade_price))
             logging.exception("No such ticker or fail to get price: " + str(e))
@@ -76,7 +76,7 @@ class CryptoTrade:
     '''
     def refresh_holding_amount(self, ticker):
         try:
-            self.holding_amount = float(self.client.spot_get_account_assets('BTC').get('data')[0].get('available'))
+            self.holding_amount = float(self.client.spot_get_account_assets(ticker).get('data')[0].get('available'))
         except Exception as e:
             logging.exception(e)
 
@@ -103,7 +103,7 @@ class CryptoTrade:
             # Update the last_trade_price and holding_amount
             self.last_trade_price = ask_price
             self.logger.info('last trade price is: ' + str(self.last_trade_price))
-            self.refresh_holding_amount(ticker)
+            self.refresh_holding_amount('BTC')
             self.write_last_trade_price('./inputs/variable.py', self.last_trade_price)
             self.refresh_buying_power()
 
@@ -131,7 +131,7 @@ class CryptoTrade:
                 self.logger.info("Sold " + str(selling_amount) + " of " + str(ticker) + " at price: " + str(bid_price))
                 self.last_trade_price = bid_price
                 self.logger.info('last trade price is: ' + str(self.last_trade_price))
-                self.refresh_holding_amount(ticker)
+                self.refresh_holding_amount('BTC')
 
             self.write_last_trade_price('./inputs/variable.py', self.last_trade_price)
             self.refresh_buying_power()
