@@ -19,6 +19,7 @@ class CryptoTrade:
     client = Client(config.API_KEY, config.SECRET_KEY, config.API_PASSPHARSE)
     last_trade_price = variable.last_trade_price
     holding_amount = 0
+    buying_power = 0
 
     '''
         The method use for executing grid trading in range of low to high, it will check the bid_price and ask_price every second, buy or sell
@@ -31,8 +32,8 @@ class CryptoTrade:
     '''
     def grid_trading(self, ticker, high, low, percentage, buying_power_percentage):
         # Get the buying power from account
-        self.buying_power = float(self.api.get_account().cash)
-        self.set_holding_amount(ticker)
+        self.refresh_holding_amount(ticker)
+        self.refresh_buying_power()
 
         self.logger.info('buying power is: ' + str(self.buying_power))
         self.logger.info('last trade price is: ' + str(self.last_trade_price))
@@ -63,8 +64,8 @@ class CryptoTrade:
         bid_price = None
         ask_price = None
         try:
-            bid_price = self.api.get_latest_crypto_quotes(list, "us")[ticker].bp
-            ask_price = self.api.get_latest_crypto_quotes(list, "us")[ticker].ap
+            bid_price = self.client.mix_get_single_symbol_ticker('BTCUSDT_UMCBL').get('data').get('bestBid')
+            ask_price = self.client.mix_get_single_symbol_ticker('BTCUSDT_UMCBL').get('data').get('bestAsk')
         except Exception as e:
             print('last trade price is: ' + str(self.last_trade_price))
             logging.exception("No such ticker or fail to get price: " + str(e))
@@ -75,7 +76,7 @@ class CryptoTrade:
     '''
     def refresh_holding_amount(self, ticker):
         try:
-            self.holding_amount = float(self.api.get_position(ticker).qty)
+            self.holding_amount = float(self.client.spot_get_account_assets('BTC').get('data')[0].get('available'))
         except Exception as e:
             logging.exception(e)
 
@@ -84,7 +85,7 @@ class CryptoTrade:
     '''
     def refresh_buying_power(self):
         try:
-            self.buying_power = float(self.api.get_account().cash)
+            self.buying_power = float(self.client.mix_get_accounts('UMCBL').get('data')[0].get('usdtEquity'))
         except Exception as e:
             logging.exception(e)
 
