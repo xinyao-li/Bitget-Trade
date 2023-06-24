@@ -154,7 +154,7 @@ class CryptoTrade:
     '''
         edge case when selling_amount is higher than holding amount
     '''
-    def not_hold_enough_amount(self, selling_amount):
+    def not_holding_enough_amount(self, selling_amount):
         # if selling amount is out of the qty we hold
         if self.holding_amount < selling_amount:
             self.logger.info("Not enough amount to sell")
