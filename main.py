@@ -118,11 +118,9 @@ class CryptoTrade:
         try:
             selling_amount = self.buying_power * buying_power_percentage / bid_price
 
-            if self.selling_amount_enough_to_sell(str(selling_amount)):
-                selling_amount = self.buying_power / bid_price
-            else:
+            if self.selling_amount_enough_to_sell(str(selling_amount)) is False:
                 selling_amount = 0
-            if self.not_hold_enough_selling_amount(selling_amount):
+            if self.not_hold_enough_amount(selling_amount):
                 selling_amount = self.holding_amount
 
             if selling_amount > 0.000000002:
@@ -156,7 +154,7 @@ class CryptoTrade:
     '''
         edge case when selling_amount is higher than holding amount
     '''
-    def not_hold_enough_selling_amount(self, selling_amount):
+    def not_hold_enough_amount(self, selling_amount):
         # if selling amount is out of the qty we hold
         if self.holding_amount < selling_amount:
             self.logger.info("Not enough amount to sell")
