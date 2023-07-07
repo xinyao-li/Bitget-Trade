@@ -42,8 +42,8 @@ class CryptoTrade:
         if self.last_trade_price is not None:
             while True:
                 # Get the current price of ticker in Binance in every 1 sec
-                bid_price = self.get_price('BTCUSDT_UMCBL')[0]
-                ask_price = self.get_price('BTCUSDT_UMCBL')[1]
+                bid_price = float(self.get_price('BTCUSDT_UMCBL')[0])
+                ask_price = float(self.get_price('BTCUSDT_UMCBL')[1])
 
                 # If the price is in range low to high, if the price drop 'percentage' then buy, else if price reach 'percentage' then sell
                 # Buy or Sell amount will be buy_power_percentage of buying power divided by current price of ticker.
@@ -85,7 +85,7 @@ class CryptoTrade:
     '''
     def refresh_buying_power(self):
         try:
-            self.buying_power = float(self.client.mix_get_accounts('UMCBL').get('data')[0].get('usdtEquity'))
+            self.buying_power = float(self.client.spot_get_account_assets()['data'][2]['available'])
         except Exception as e:
             logging.exception(e)
 
@@ -96,9 +96,11 @@ class CryptoTrade:
     def buy_and_update_info(self, ticker, buying_power_percentage, ask_price):
         try:
             buying_amount = self.buying_power * buying_power_percentage / ask_price
-            self.client.spot_place_order(symbol=ticker, price=ask_price, quantity=buying_amount, side='buy',
+            self.logger.info("ask_price: " + str(ask_price))
+            self.logger.info("buying_amount: "+str(buying_amount))
+            self.client.spot_place_order(symbol=ticker, price=ask_price, quantity=round(buying_amount,4), side='buy',
                                          orderType='limit', force="normal")
-            self.logger.info("Bought " + str(buying_amount) + " of " + str(ticker) + " at price: " + str(ask_price))
+            self.logger.info("Bought " + str(round(buying_amount,4)) + " of " + str(ticker) + " at price: " + str(ask_price))
 
             # Update the last_trade_price and holding_amount
             self.last_trade_price = ask_price
@@ -124,9 +126,9 @@ class CryptoTrade:
                 selling_amount = self.holding_amount
 
             if selling_amount > 0.000000002:
-                self.client.spot_place_order(symbol=ticker, price=bid_price, quantity=selling_amount, side='sell',
+                self.client.spot_place_order(symbol=ticker, price=bid_price, quantity=round(selling_amount,4), side='sell',
                                              orderType='limit', force="normal")
-                self.logger.info("Sold " + str(selling_amount) + " of " + str(ticker) + " at price: " + str(bid_price))
+                self.logger.info("Sold " + str(round(selling_amount,4)) + " of " + str(ticker) + " at price: " + str(bid_price))
                 self.last_trade_price = bid_price
                 self.logger.info('last trade price is: ' + str(self.last_trade_price))
                 self.refresh_holding_amount('BTC')
