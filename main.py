@@ -119,6 +119,8 @@ class CryptoTrade:
     def sell_and_update_info(self, ticker, buying_power_percentage, bid_price):
         try:
             selling_amount = self.buying_power * buying_power_percentage / bid_price
+            self.logger.info("bid_price: " + str(bid_price))
+            self.logger.info("selling_amount: " + str(selling_amount))
 
             if self.selling_amount_enough_to_sell(str(selling_amount)) is False:
                 selling_amount = 0

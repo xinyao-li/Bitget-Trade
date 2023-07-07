@@ -1,1 +1,4 @@
 
+2023-07-06 23:28:37,216 - INFO - buying power is: 9.14810636
+2023-07-06 23:28:37,217 - INFO - last trade price is: 30124.0
+2023-07-06 23:28:37,217 - INFO - holding amount is: 0.003696
