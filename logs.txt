@@ -1,4 +1,42 @@
 
-2023-07-06 23:28:37,216 - INFO - buying power is: 9.14810636
-2023-07-06 23:28:37,217 - INFO - last trade price is: 30124.0
-2023-07-06 23:28:37,217 - INFO - holding amount is: 0.003696
+2023-07-29 21:47:57,715 - INFO - buying power is: 4.6913772
+2023-07-29 21:47:57,715 - INFO - last trade price is: 29308.0
+2023-07-29 21:47:57,715 - INFO - holding amount is: 0.005694
+2023-07-29 21:48:25,489 - INFO - buying power is: 4.6913772
+2023-07-29 21:48:25,489 - INFO - last trade price is: 26308.0
+2023-07-29 21:48:25,490 - INFO - holding amount is: 0.005694
+2023-07-29 21:48:26,313 - INFO - bid_price: 29308.0
+2023-07-29 21:48:26,313 - INFO - selling_amount: 8.003577862699604e-05
+2023-07-29 21:48:26,313 - ERROR - Sell Order submission failed: 'CryptoTrade' object has no attribute 'not_hold_enough_amount'
+Traceback (most recent call last):
+  File "/Users/xinyaoli/PycharmProjects/Bitget-Trade/main.py", line 156, in sell_and_update_info
+    if self.not_hold_enough_amount(selling_amount):
+AttributeError: 'CryptoTrade' object has no attribute 'not_hold_enough_amount'
+2023-07-29 21:48:28,150 - INFO - bid_price: 29308.0
+2023-07-29 21:48:28,150 - INFO - selling_amount: 8.003577862699604e-05
+2023-07-29 21:48:28,150 - ERROR - Sell Order submission failed: 'CryptoTrade' object has no attribute 'not_hold_enough_amount'
+Traceback (most recent call last):
+  File "/Users/xinyaoli/PycharmProjects/Bitget-Trade/main.py", line 156, in sell_and_update_info
+    if self.not_hold_enough_amount(selling_amount):
+AttributeError: 'CryptoTrade' object has no attribute 'not_hold_enough_amount'
+2023-07-29 21:48:30,020 - INFO - bid_price: 29308.0
+2023-07-29 21:48:30,022 - INFO - selling_amount: 8.003577862699604e-05
+2023-07-29 21:48:30,022 - ERROR - Sell Order submission failed: 'CryptoTrade' object has no attribute 'not_hold_enough_amount'
+Traceback (most recent call last):
+  File "/Users/xinyaoli/PycharmProjects/Bitget-Trade/main.py", line 156, in sell_and_update_info
+    if self.not_hold_enough_amount(selling_amount):
+AttributeError: 'CryptoTrade' object has no attribute 'not_hold_enough_amount'
+2023-07-29 21:48:31,828 - INFO - bid_price: 29308.0
+2023-07-29 21:48:31,829 - INFO - selling_amount: 8.003577862699604e-05
+2023-07-29 21:48:31,829 - ERROR - Sell Order submission failed: 'CryptoTrade' object has no attribute 'not_hold_enough_amount'
+Traceback (most recent call last):
+  File "/Users/xinyaoli/PycharmProjects/Bitget-Trade/main.py", line 156, in sell_and_update_info
+    if self.not_hold_enough_amount(selling_amount):
+AttributeError: 'CryptoTrade' object has no attribute 'not_hold_enough_amount'
+2023-07-29 21:48:33,724 - INFO - bid_price: 29308.0
+2023-07-29 21:48:33,724 - INFO - selling_amount: 8.003577862699604e-05
+2023-07-29 21:48:33,724 - ERROR - Sell Order submission failed: 'CryptoTrade' object has no attribute 'not_hold_enough_amount'
+Traceback (most recent call last):
+  File "/Users/xinyaoli/PycharmProjects/Bitget-Trade/main.py", line 156, in sell_and_update_info
+    if self.not_hold_enough_amount(selling_amount):
+AttributeError: 'CryptoTrade' object has no attribute 'not_hold_enough_amount'
