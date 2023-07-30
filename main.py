@@ -18,6 +18,7 @@ class CryptoTrade:
     handler.setFormatter(formatter)
     logger.addHandler(handler)
 
+    # create a logger for collect the price data
     logger2 = logging.getLogger('my_logger2')
     logger2.setLevel(logging.INFO)
     handler2 = logging.FileHandler('./analysis/price_data.txt')
@@ -81,8 +82,8 @@ class CryptoTrade:
         try:
             bid_price = self.client.mix_get_single_symbol_ticker(ticker).get('data').get('bestBid')
             ask_price = self.client.mix_get_single_symbol_ticker(ticker).get('data').get('bestAsk')
-            #self.logger.info('ask_price:' + str(ask_price))
-            #self.logger.info('bid_price:' + str(bid_price))
+            self.logger2.info('ask_price:' + str(ask_price))
+            self.logger2.info('bid_price:' + str(bid_price))
         except Exception as e:
             print('last trade price is: ' + str(self.last_trade_price))
             logging.exception("No such ticker or fail to get price: " + str(e))
@@ -107,8 +108,8 @@ class CryptoTrade:
             logging.exception(e)
 
     '''
-        place a limit buying order when ask price touch the trading line, after trading completed, update the buying_power,holding_amount and
-        last_trade_price in variable.py as well.
+        place a limit buying order when ask price touch the trading line, after trading completed, update the buying_power,holding_amount, buy and sell balance 
+        and last_trade_price in variable.py as well.
     '''
     def buy_and_update_info(self, ticker, buying_power_percentage, ask_price, threshold):
         try:
@@ -142,8 +143,8 @@ class CryptoTrade:
             self.logger.exception("Buy Order submission failed: "+str(e))
 
     '''
-        place a limit selling order when bid price touch the trading line, after trading completed, update the buying_power, holding_amount and 
-        last_trade_price in variable.py as well.
+        place a limit selling order when bid price touch the trading line, after trading completed, update the buying_power, holding_amount, buy and sell balance
+        and last_trade_price in variable.py as well.
     '''
     def sell_and_update_info(self, ticker, buying_power_percentage, bid_price, threshold):
         try:

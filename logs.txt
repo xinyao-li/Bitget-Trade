@@ -40,3 +40,6 @@ Traceback (most recent call last):
   File "/Users/xinyaoli/PycharmProjects/Bitget-Trade/main.py", line 156, in sell_and_update_info
     if self.not_hold_enough_amount(selling_amount):
 AttributeError: 'CryptoTrade' object has no attribute 'not_hold_enough_amount'
+2023-07-29 23:20:20,526 - INFO - buying power is: 4.6913772
+2023-07-29 23:20:20,527 - INFO - last trade price is: 26308.0
+2023-07-29 23:20:20,527 - INFO - holding amount is: 0.005694

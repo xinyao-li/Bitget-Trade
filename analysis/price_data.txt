@@ -34,3 +34,34 @@ ask_price:29308.5
 bid_price:29308
 2023-07-29 21:47:57.205720
 2023-07-29 21:48:25.065122
+2023-07-29 23:20:20.076337
+ask_price:29272.5
+bid_price:29272
+ask_price:29272.5
+bid_price:29272
+ask_price:29272.5
+bid_price:29272
+ask_price:29272.5
+bid_price:29272
+ask_price:29272.5
+bid_price:29272
+ask_price:29272.5
+bid_price:29272
+ask_price:29271.5
+bid_price:29271
+ask_price:29271.5
+bid_price:29271
+ask_price:29271.5
+bid_price:29271
+ask_price:29271.5
+bid_price:29271
+ask_price:29271.5
+bid_price:29271
+ask_price:29271.5
+bid_price:29271
+ask_price:29271.5
+bid_price:29271
+ask_price:29271.5
+bid_price:29271
+ask_price:29271.5
+bid_price:29271
