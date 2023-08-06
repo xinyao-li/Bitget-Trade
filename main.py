@@ -2,7 +2,7 @@ from inputs import config
 from inputs import parameter
 from inputs import variable
 from analysis import normal_distribution
-from pybitget import Client
+import bybit
 import logging
 import time
 import os
@@ -26,7 +26,8 @@ class CryptoTrade:
     logger2.addHandler(handler2)
 
     # Instantiate REST API Connection
-    client = Client(config.API_KEY, config.SECRET_KEY, config.API_PASSPHARSE)
+    client = bybit.bybit(test=False, api_key=config.API_KEY, api_secret=config.SECRET_KEY)
+    btc_usd_index = 51
     last_trade_price = variable.last_trade_price
     holding_amount = 0
     buying_power = 0
@@ -80,8 +81,8 @@ class CryptoTrade:
         bid_price = None
         ask_price = None
         try:
-            bid_price = self.client.mix_get_single_symbol_ticker(ticker).get('data').get('bestBid')
-            ask_price = self.client.mix_get_single_symbol_ticker(ticker).get('data').get('bestAsk')
+            bid_price = self.info[0]['result'][self.btc_usd_index]['bid_price']
+            ask_price = self.info[0]['result'][self.btc_usd_index]['ask_price']
             self.logger2.info('ask_price:' + str(ask_price))
             self.logger2.info('bid_price:' + str(bid_price))
         except Exception as e:

@@ -1,5 +1,5 @@
 import logging
-from pybitget import Client
+import bybit
 from inputs import config
 import time
 import datetime
@@ -11,13 +11,15 @@ class CryptoData:
     handler = logging.FileHandler('./price_data.txt')
     logger.addHandler(handler)
 
-    client = Client(config.API_KEY, config.SECRET_KEY, config.API_PASSPHARSE)
+    client = bybit.bybit(test=False, api_key=config.API_KEY, api_secret=config.SECRET_KEY)
+    info = client.Market.Market_symbolInfo().result()
+    btc_usd_index = 51
 
     def data_retrieve(self,ticker):
         while True:
             try:
-                bid_price = self.client.mix_get_single_symbol_ticker(ticker).get('data').get('bestBid')
-                ask_price = self.client.mix_get_single_symbol_ticker(ticker).get('data').get('bestAsk')
+                bid_price = self.info[0]['result'][self.btc_usd_index]['bid_price']
+                ask_price = self.info[0]['result'][self.btc_usd_index]['ask_price']
                 self.logger.info('ask_price:' + str(ask_price))
                 self.logger.info('bid_price:' + str(bid_price))
                 time.sleep(1)
