@@ -67,10 +67,10 @@ class CryptoTrade:
                 # Buy or Sell amount will be buy_power_percentage of buying power divided by current price of ticker.
                 if bid_price is not None and ask_price is not None and ask_price <= high and bid_price >= low:
                     if ask_price <= self.last_trade_price * (1 - percentage):
-                        self.buy_and_update_info(ticker, buying_power_percentage * self.buy_balance, ask_price, threshold)
+                        self.buy_and_update_info(ticker, buying_power_percentage * self.buy_balance, ask_price, percentage,threshold)
 
                     elif bid_price >= self.last_trade_price * (1 + percentage):
-                        self.sell_and_update_info(ticker, buying_power_percentage * self.sell_balance, bid_price, threshold)
+                        self.sell_and_update_info(ticker, buying_power_percentage * self.sell_balance, bid_price, percentage,threshold)
                 #wait for 1 sec for the price update
                 time.sleep(1)
                 self.seconds += 1
@@ -115,7 +115,7 @@ class CryptoTrade:
         place a limit buying order when ask price touch the trading line, after trading completed, update the buying_power,holding_amount, buy and sell balance 
         and last_trade_price in variable.py as well.
     '''
-    def buy_and_update_info(self, ticker, buying_power_percentage, ask_price, threshold):
+    def buy_and_update_info(self, ticker, buying_power_percentage, ask_price, percentage, threshold):
         try:
             buying_amount = self.buying_power * buying_power_percentage / ask_price
             self.logger.info("ask_price: " + str(ask_price))
@@ -127,7 +127,7 @@ class CryptoTrade:
                 orderType="Limit",
                 qty=str(round(buying_amount,3)),
                 price=ask_price,
-                takeProfit=str(ask_price),
+                takeProfit=str(self.last_trade_price * (1 + percentage)),
                 tpTriggerBy="MarketPrice",
                 positionIdx="1",
                 timeInForce="GTC",
@@ -160,7 +160,7 @@ class CryptoTrade:
         place a limit selling order when bid price touch the trading line, after trading completed, update the buying_power, holding_amount, buy and sell balance
         and last_trade_price in variable.py as well.
     '''
-    def sell_and_update_info(self, ticker, buying_power_percentage, bid_price, threshold):
+    def sell_and_update_info(self, ticker, buying_power_percentage, bid_price, percentage,threshold):
         try:
             selling_amount = self.buying_power * buying_power_percentage / bid_price
             self.logger.info("bid_price: " + str(bid_price))
@@ -179,7 +179,7 @@ class CryptoTrade:
                     orderType="Limit",
                     qty=str(round(selling_amount,3)),
                     price=bid_price,
-                    takeProfit=str(bid_price),
+                    takeProfit=str(self.last_trade_price * (1 - percentage)),
                     tpTriggerBy="MarketPrice",
                     positionIdx="2",
                     timeInForce="GTC",
