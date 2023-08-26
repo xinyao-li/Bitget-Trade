@@ -1,1 +1,11 @@
 
+2023-08-25 21:34:30,360 - INFO - buying power is: 494.40854145
+2023-08-25 21:34:30,361 - INFO - last trade price is: 27055.1
+2023-08-25 21:34:30,361 - INFO - holding amount is: 494.40854145
+2023-08-25 21:34:32,893 - INFO - ask_price: 26050.8
+2023-08-25 21:34:32,893 - INFO - buying_amount: 0.03795726361186604
+2023-08-25 21:34:33,596 - INFO - Bought 0.038 of BTCUSDT at price: 26050.8
+2023-08-25 21:34:33,596 - INFO - last trade price is: 26050.8
+2023-08-25 21:34:54,865 - INFO - buying power is: 493.3158201
+2023-08-25 21:34:54,866 - INFO - last trade price is: 26050.8
+2023-08-25 21:34:54,866 - INFO - holding amount is: 493.3158201

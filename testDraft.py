@@ -27,7 +27,7 @@ print(bid_price)
 print(ask_price)
 
 #Place a buy order
-
+'''
 print(session.place_order(
     category="linear",
     symbol="BTCUSDT",
@@ -40,6 +40,7 @@ print(session.place_order(
     positionIdx ="1",
     timeInForce="GTC",
 ))
+'''
 #Place a sell order
 '''
 print(session.place_order(

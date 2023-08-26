@@ -125,7 +125,7 @@ class CryptoTrade:
                 symbol="BTCUSDT",
                 side="Buy",
                 orderType="Limit",
-                qty=str(round(buying_amount,4)),
+                qty=str(round(buying_amount,3)),
                 price=ask_price,
                 takeProfit=str(ask_price),
                 tpTriggerBy="MarketPrice",
@@ -138,7 +138,7 @@ class CryptoTrade:
             self.last_trade_price = ask_price
             self.logger.info('last trade price is: ' + str(self.last_trade_price))
             self.refresh_holding_amount('BTC')
-            self.write_variable('./inputs/variable.py', self.last_trade_price,'last_trade_price')
+            self.write_variable('./inputs/variable.py', self.last_trade_price)
             if self.reach_threshold(threshold):
                 self.buy_balance += 1
                 self.write_variable('./inputs/variable.py', self.last_trade_price)
@@ -177,7 +177,7 @@ class CryptoTrade:
                     symbol="BTCUSDT",
                     side="Sell",
                     orderType="Limit",
-                    qty=str(round(selling_amount,4)),
+                    qty=str(round(selling_amount,3)),
                     price=bid_price,
                     takeProfit=str(bid_price),
                     tpTriggerBy="MarketPrice",
@@ -189,7 +189,7 @@ class CryptoTrade:
                 self.logger.info('last trade price is: ' + str(self.last_trade_price))
                 self.refresh_holding_amount('BTC')
 
-            self.write_variable('./inputs/variable.py', self.last_trade_price,'last_trade_price')
+            self.write_variable('./inputs/variable.py', self.last_trade_price)
 
             if self.reach_threshold(threshold):
                 self.sell_balance = self.sell_balance + 1
@@ -254,8 +254,7 @@ class CryptoTrade:
             result = distribution.distribution_cal('./analysis/price_data.txt')
             self.grid_trading(ticker, result[0], result[1], percentage, buying_power_percentage, period, threshold)
             self.seconds = 0
-            self.write_variable('./inputs/variable.py', self.last_trade_price, 'last_trade_price')
-            self.write_variable('./inputs/variable.py', self.seconds, 'seconds')
+            self.write_variable('./inputs/variable.py', self.last_trade_price)
 
     def run_trade(self,ticker,percentage,buying_power_percentage,period,threshold):
         self.normal_distribution_calculate(ticker, percentage, buying_power_percentage, period, threshold)
