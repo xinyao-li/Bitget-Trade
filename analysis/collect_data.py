@@ -1,5 +1,5 @@
 import logging
-import bybit
+from pybit.unified_trading import HTTP
 from inputs import config
 import time
 import datetime
@@ -11,15 +11,17 @@ class CryptoData:
     handler = logging.FileHandler('./price_data.txt')
     logger.addHandler(handler)
 
-    client = bybit.bybit(test=False, api_key=config.API_KEY, api_secret=config.SECRET_KEY)
-    info = client.Market.Market_symbolInfo().result()
-    btc_usd_index = 51
+    session = HTTP(
+        testnet=False,
+        api_key=config.API_KEY,
+        api_secret=config.SECRET_KEY
+    )
 
     def data_retrieve(self,ticker):
         while True:
             try:
-                bid_price = self.info[0]['result'][self.btc_usd_index]['bid_price']
-                ask_price = self.info[0]['result'][self.btc_usd_index]['ask_price']
+                bid_price = self.session.get_tickers(category="linear",symbol="BTCUSDT")['result']['list'][0]['bid1Price']
+                ask_price = self.session.get_tickers(category="linear",symbol="BTCUSDT")['result']['list'][0]['ask1Price']
                 self.logger.info('ask_price:' + str(ask_price))
                 self.logger.info('bid_price:' + str(bid_price))
                 time.sleep(1)

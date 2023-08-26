@@ -1,8 +1,12 @@
-from pybitget import Client
+from pybit.unified_trading import HTTP
 from inputs import config
 class Distribution:
     # Instantiate REST API Connection
-    client = Client(config.API_KEY, config.SECRET_KEY, config.API_PASSPHARSE)
+    session = HTTP(
+        testnet=False,
+        api_key=config.API_KEY,
+        api_secret=config.SECRET_KEY
+    )
 
     def shapeData(self,file):
         bid_price_list = []

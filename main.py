@@ -2,7 +2,7 @@ from inputs import config
 from inputs import parameter
 from inputs import variable
 from analysis import normal_distribution
-import bybit
+from pybit.unified_trading import HTTP
 import logging
 import time
 import os
@@ -26,8 +26,11 @@ class CryptoTrade:
     logger2.addHandler(handler2)
 
     # Instantiate REST API Connection
-    client = bybit.bybit(test=False, api_key=config.API_KEY, api_secret=config.SECRET_KEY)
-    btc_usd_index = 51
+    session = HTTP(
+        testnet=False,
+        api_key=config.API_KEY,
+        api_secret=config.SECRET_KEY
+    )
     last_trade_price = variable.last_trade_price
     holding_amount = 0
     buying_power = 0
@@ -81,8 +84,8 @@ class CryptoTrade:
         bid_price = None
         ask_price = None
         try:
-            bid_price = self.info[0]['result'][self.btc_usd_index]['bid_price']
-            ask_price = self.info[0]['result'][self.btc_usd_index]['ask_price']
+            bid_price = self.session.get_tickers(category="linear",symbol="BTCUSDT")['result']['list'][0]['bid1Price']
+            ask_price = self.session.get_tickers(category="linear",symbol="BTCUSDT")['result']['list'][0]['ask1Price']
             self.logger2.info('ask_price:' + str(ask_price))
             self.logger2.info('bid_price:' + str(bid_price))
         except Exception as e:
@@ -95,7 +98,7 @@ class CryptoTrade:
     '''
     def refresh_holding_amount(self, ticker):
         try:
-            self.holding_amount = float(self.client.spot_get_account_assets(ticker).get('data')[0].get('available'))
+            self.holding_amount = float(self.session.get_wallet_balance(accountType="CONTRACT")['result']['list'][0]['coin'][0]['availableToWithdraw'])
         except Exception as e:
             logging.exception(e)
 
@@ -104,7 +107,7 @@ class CryptoTrade:
     '''
     def refresh_buying_power(self):
         try:
-            self.buying_power = float(self.client.spot_get_account_assets()['data'][2]['available'])
+            self.buying_power = float(self.session.get_wallet_balance(accountType="CONTRACT")['result']['list'][0]['coin'][0]['availableToWithdraw'])
         except Exception as e:
             logging.exception(e)
 
@@ -117,8 +120,18 @@ class CryptoTrade:
             buying_amount = self.buying_power * buying_power_percentage / ask_price
             self.logger.info("ask_price: " + str(ask_price))
             self.logger.info("buying_amount: "+str(buying_amount))
-            self.client.spot_place_order(symbol=ticker, price=ask_price, quantity=round(buying_amount,4), side='buy',
-                                         orderType='limit', force="normal")
+            self.session.place_order(
+                category="linear",
+                symbol="BTCUSDT",
+                side="Buy",
+                orderType="Limit",
+                qty=str(round(buying_amount,4)),
+                price=ask_price,
+                takeProfit=str(ask_price),
+                tpTriggerBy="MarketPrice",
+                positionIdx="1",
+                timeInForce="GTC",
+            )
             self.logger.info("Bought " + str(round(buying_amount,4)) + " of " + str(ticker) + " at price: " + str(ask_price))
 
             # Update the last_trade_price and holding_amount
@@ -159,8 +172,18 @@ class CryptoTrade:
                 selling_amount = self.holding_amount
 
             if selling_amount > 0.000000002:
-                self.client.spot_place_order(symbol=ticker, price=bid_price, quantity=round(selling_amount,4), side='sell',
-                                             orderType='limit', force="normal")
+                self.session.place_order(
+                    category="linear",
+                    symbol="BTCUSDT",
+                    side="Sell",
+                    orderType="Limit",
+                    qty=str(round(selling_amount,4)),
+                    price=bid_price,
+                    takeProfit=str(bid_price),
+                    tpTriggerBy="MarketPrice",
+                    positionIdx="2",
+                    timeInForce="GTC",
+                )
                 self.logger.info("Sold " + str(round(selling_amount,4)) + " of " + str(ticker) + " at price: " + str(bid_price))
                 self.last_trade_price = bid_price
                 self.logger.info('last trade price is: ' + str(self.last_trade_price))

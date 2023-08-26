@@ -1,20 +1,13 @@
-
-2023-08-05 23:14:13.229744
-ask_price:29041.50
-bid_price:29041.00
-ask_price:29041.50
-bid_price:29041.00
-ask_price:29041.50
-bid_price:29041.00
-ask_price:29041.50
-bid_price:29041.00
-ask_price:29041.50
-bid_price:29041.00
-ask_price:29041.50
-bid_price:29041.00
-ask_price:29041.50
-bid_price:29041.00
-ask_price:29041.50
-bid_price:29041.00
-ask_price:29041.50
-bid_price:29041.00
+2023-08-25 21:14:57.855369
+ask_price:26058.40
+bid_price:26058.30
+ask_price:26058.40
+bid_price:26058.30
+ask_price:26058.40
+bid_price:26058.30
+ask_price:26058.40
+bid_price:26058.30
+ask_price:26058.40
+bid_price:26058.30
+ask_price:26058.40
+bid_price:26058.30
