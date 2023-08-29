@@ -1,4 +1,355 @@
 
-2023-08-25 22:00:51,479 - INFO - buying power is: 493.3158201
-2023-08-25 22:00:51,480 - INFO - last trade price is: 26050.8
-2023-08-25 22:00:51,480 - INFO - holding amount is: 493.3158201
+2023-08-29 00:39:42,049 - INFO - equity is: 489.5882559
+2023-08-29 00:39:42,049 - INFO - last trade price is: 26050.8
+2023-08-29 00:39:42,559 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:42).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.02", "price": "26034", "takeProfit": "26086.068", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:42).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.02", "price": "26034", "takeProfit": "26086.068", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:43,089 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:43).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.03", "price": "26035", "takeProfit": "26087.07", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:43).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.03", "price": "26035", "takeProfit": "26087.07", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:43,711 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:43).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.04", "price": "26036", "takeProfit": "26088.072", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:43).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.04", "price": "26036", "takeProfit": "26088.072", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:44,241 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:44).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.01", "price": "26037", "takeProfit": "26089.074", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:44).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.01", "price": "26037", "takeProfit": "26089.074", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:44,836 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:44).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.02", "price": "26038", "takeProfit": "26090.076", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:44).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.02", "price": "26038", "takeProfit": "26090.076", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:45,353 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:45).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.03", "price": "26039", "takeProfit": "26091.078", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:45).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.03", "price": "26039", "takeProfit": "26091.078", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:45,543 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:45).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.04", "price": "26040", "takeProfit": "26092.08", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:45).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.04", "price": "26040", "takeProfit": "26092.08", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:46,054 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:46).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.01", "price": "26041", "takeProfit": "26093.082", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:46).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.01", "price": "26041", "takeProfit": "26093.082", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:46,735 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:46).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.02", "price": "26042", "takeProfit": "26094.084", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:46).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.02", "price": "26042", "takeProfit": "26094.084", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:47,446 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:47).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.03", "price": "26043", "takeProfit": "26095.086", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:47).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.03", "price": "26043", "takeProfit": "26095.086", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:47,636 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:47).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.04", "price": "26044", "takeProfit": "26096.088", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:47).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.04", "price": "26044", "takeProfit": "26096.088", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:47,826 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:47).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.01", "price": "26045", "takeProfit": "26097.09", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:47).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.01", "price": "26045", "takeProfit": "26097.09", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:48,523 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:48).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.02", "price": "26046", "takeProfit": "26098.092", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:48).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.02", "price": "26046", "takeProfit": "26098.092", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:49,058 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:49).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.03", "price": "26047", "takeProfit": "26099.094", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:49).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.03", "price": "26047", "takeProfit": "26099.094", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:49,246 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:49).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.04", "price": "26048", "takeProfit": "26100.096", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:49).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.04", "price": "26048", "takeProfit": "26100.096", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:49,435 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:49).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.01", "price": "26049", "takeProfit": "26101.098", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:49).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.01", "price": "26049", "takeProfit": "26101.098", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:50,135 - ERROR - Buy Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:50).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.02", "price": "26050", "takeProfit": "26102.1", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 87, in place_buying_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:50).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Buy", "orderType": "Limit", "qty": "0.02", "price": "26050", "takeProfit": "26102.1", "tpTriggerBy": "MarketPrice", "positionIdx": 1, "timeInForce": "GTC"}.
+2023-08-29 00:39:50,663 - ERROR - Sell Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:50).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.01", "price": "26051", "takeProfit": "25998.898", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 107, in place_selling_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:50).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.01", "price": "26051", "takeProfit": "25998.898", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+2023-08-29 00:39:50,877 - ERROR - Sell Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:50).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.02", "price": "26052", "takeProfit": "25999.896", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 107, in place_selling_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:50).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.02", "price": "26052", "takeProfit": "25999.896", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+2023-08-29 00:39:51,059 - ERROR - Sell Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:51).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.03", "price": "26053", "takeProfit": "26000.894", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 107, in place_selling_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:51).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.03", "price": "26053", "takeProfit": "26000.894", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+2023-08-29 00:39:51,594 - ERROR - Sell Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:51).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.04", "price": "26054", "takeProfit": "26001.892", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 107, in place_selling_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:51).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.04", "price": "26054", "takeProfit": "26001.892", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+2023-08-29 00:39:51,787 - ERROR - Sell Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:51).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.01", "price": "26055", "takeProfit": "26002.89", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 107, in place_selling_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:51).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.01", "price": "26055", "takeProfit": "26002.89", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+2023-08-29 00:39:51,968 - ERROR - Sell Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:51).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.02", "price": "26056", "takeProfit": "26003.888", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 107, in place_selling_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:51).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.02", "price": "26056", "takeProfit": "26003.888", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+2023-08-29 00:39:52,148 - ERROR - Sell Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:52).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.03", "price": "26057", "takeProfit": "26004.886", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 107, in place_selling_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:52).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.03", "price": "26057", "takeProfit": "26004.886", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+2023-08-29 00:39:52,338 - ERROR - Sell Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:52).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.04", "price": "26058", "takeProfit": "26005.884", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 107, in place_selling_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:52).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.04", "price": "26058", "takeProfit": "26005.884", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+2023-08-29 00:39:52,528 - ERROR - Sell Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:52).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.01", "price": "26059", "takeProfit": "26006.882", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 107, in place_selling_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:52).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.01", "price": "26059", "takeProfit": "26006.882", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+2023-08-29 00:39:52,719 - ERROR - Sell Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:52).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.02", "price": "26060", "takeProfit": "26007.88", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 107, in place_selling_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:52).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.02", "price": "26060", "takeProfit": "26007.88", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+2023-08-29 00:39:52,909 - ERROR - Sell Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:52).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.03", "price": "26061", "takeProfit": "26008.878", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 107, in place_selling_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:52).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.03", "price": "26061", "takeProfit": "26008.878", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+2023-08-29 00:39:53,088 - ERROR - Sell Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:53).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.04", "price": "26062", "takeProfit": "26009.876", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 107, in place_selling_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:53).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.04", "price": "26062", "takeProfit": "26009.876", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+2023-08-29 00:39:53,269 - ERROR - Sell Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:53).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.01", "price": "26063", "takeProfit": "26010.874", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 107, in place_selling_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:53).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.01", "price": "26063", "takeProfit": "26010.874", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+2023-08-29 00:39:53,459 - ERROR - Sell Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:53).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.02", "price": "26064", "takeProfit": "26011.872", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 107, in place_selling_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:53).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.02", "price": "26064", "takeProfit": "26011.872", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+2023-08-29 00:39:53,650 - ERROR - Sell Order submission failed: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:53).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.03", "price": "26065", "takeProfit": "26012.87", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
+Traceback (most recent call last):
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/main.py", line 107, in place_selling_order
+    self.session.place_order(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_v5_trade.py", line 21, in place_order
+    return self._submit_request(
+  File "/Users/xinyaoli/Desktop/Bitget-Trade/venv/lib/python3.10/site-packages/pybit/_http_manager.py", line 343, in _submit_request
+    raise InvalidRequestError(
+pybit.exceptions.InvalidRequestError: Insufficient available balance (ErrCode: 110007) (ErrTime: 07:39:53).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "BTCUSDT", "side": "Sell", "orderType": "Limit", "qty": "0.03", "price": "26065", "takeProfit": "26012.87", "tpTriggerBy": "MarketPrice", "positionIdx": 2, "timeInForce": "GTC"}.
